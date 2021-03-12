@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\SurftwareController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,19 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('surftware', [RegistroController::class, 'index']);
+Route::get('surftware', [SurftwareController::class, 'index']);
 
-Route::get('surftware/registro', [RegistroController::class,'registro']);
-
-
-
-
-
-
-
-
-
-
+Route::get('surftware/registro', [SurftwareController::class, 'registro']   );
 
 Auth::routes();
 
